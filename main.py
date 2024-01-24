@@ -1,7 +1,15 @@
 import streamlit as st
 import pandas
+from st_pages import Page, show_pages
 
 st.set_page_config(layout="wide")
+
+show_pages(
+    [
+        Page("main.py", "Home", "🏠"),
+        Page("pages/contact_us.py", "Contact Us", "📧")
+    ]
+)
 
 col1, col2 = st.columns(2)
 
