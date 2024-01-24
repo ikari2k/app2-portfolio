@@ -1,4 +1,4 @@
-import smtplib, ssl
+import smtplib, ssl, os
 
 
 def send_email(message):
@@ -6,7 +6,7 @@ def send_email(message):
     port = 465
 
     username = 'plutontestpython@gmail.com'
-    password = 'zdmtftedjxqbremt'
+    password = os.getenv("PASSWORD")
 
     receiver = 'pluta.m@gmail.com'
     my_context = ssl.create_default_context()
